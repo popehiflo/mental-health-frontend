@@ -84,3 +84,21 @@ section:nth-child(even) {
   color: var(--secondary-color);
   box-shadow: var(--secondary-box-shadow);
 }
+
+@media (max-width: 991px) {
+  html {
+    font-size: 55%;
+  }
+  section {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+  section {
+    padding: 1rem;
+  }
+}
