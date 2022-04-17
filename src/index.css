@@ -1,13 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap");
 
 :root {
-  --blue: #1977cc;
-  --black: #444;
+  --primary-color: #1977cc;
+  --secondary-color: #444;
   --white: #fff;
   --light-color: #777;
-  --box-shadow: 0.5rem 0.5rem 0 rgba(25, 119, 204, 0.2);
-  --text-shadow: 0.4rem 0.4rem 0 rgba(0, 0, 0, 0.2);
-  --border: 0.2rem solid var(--blue);
+  --primary-box-shadow: 0.5rem 0.5rem 0 rgba(25, 119, 204, 0.2);
+  --secondary-box-shadow: 0.4rem 0.4rem 0 rgba(68, 68, 68, 0.2);
+  --text-shadow: 0.4rem 0.4rem 0 rgba(68, 68, 68, 0.2);
+  --primary-border: 0.2rem solid var(--primary-color);
+  --secondary-border: 0.2rem solid var(--secondary-color);
+  --background-color: #f5f5f5;
 }
 
 * {
@@ -33,7 +36,7 @@ section {
 }
 
 section:nth-child(even) {
-  background: #f5f5f5;
+  background: var(--background-color);
 }
 
 .section-heading {
@@ -41,7 +44,7 @@ section:nth-child(even) {
   padding-bottom: 2rem;
   text-shadow: var(--text-shadow);
   text-transform: capitalize;
-  color: var(--blue);
+  color: var(--primary-color);
   font-size: 5rem;
   letter-spacing: 0.4rem;
 }
@@ -50,16 +53,34 @@ section:nth-child(even) {
   display: inline-block;
   margin-top: 1rem;
   padding: 0.5rem 1rem;
-  border: var(--border);
+  border: var(--primary-border);
   border-radius: 2.48rem;
   color: var(--white);
   font-size: 1.7rem;
   cursor: pointer;
-  background-color: var(--blue);
+  background-color: var(--primary-color);
 }
 
 .btn-primary:hover {
   background: var(--white);
-  color: var(--blue);
-  box-shadow: var(--box-shadow);
+  color: var(--primary-color);
+  box-shadow: var(--primary-box-shadow);
+}
+
+.btn-secondary {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  border: var(--secondary-border);
+  border-radius: 2.48rem;
+  color: var(--white);
+  font-size: 1.7rem;
+  cursor: pointer;
+  background-color: var(--secondary-color);
+}
+
+.btn-secondary:hover {
+  background: var(--white);
+  color: var(--secondary-color);
+  box-shadow: var(--secondary-box-shadow);
 }
