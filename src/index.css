@@ -85,6 +85,23 @@ section:nth-child(even) {
   box-shadow: var(--secondary-box-shadow);
 }
 
+.btn-primary-sm {
+  display: inline-block;
+  padding: 0.2rem 1rem;
+  border: var(--primary-border);
+  border-radius: 2.48rem;
+  color: var(--white);
+  font-size: 1.7rem;
+  cursor: pointer;
+  background-color: var(--primary-color);
+}
+
+.btn-primary-sm:hover {
+  background: var(--white);
+  color: var(--primary-color);
+  box-shadow: var(--primary-box-shadow);
+}
+
 @media (max-width: 991px) {
   html {
     font-size: 55%;
