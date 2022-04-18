@@ -62,7 +62,10 @@ const HeaderNavMenu = styledComponents.nav`
       display: block;
       transition: 0.2s ease-out;
       text-align: center;
-      margin: 0.2rem 0.5rem;
+      margin: 2rem 0.5rem;
+      .btn-primary-sm {
+        padding: 0.2rem 5rem;
+      }
     }
     &.active {
       transform: scale(1);
