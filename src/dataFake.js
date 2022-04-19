@@ -31,4 +31,41 @@ export const dataSliders = [
   },
 ];
 
-export const dataCategories = [];
+export const dataCategories = [
+  {
+    id: 1,
+    img: 'https://images.pexels.com/photos/1104007/pexels-photo-1104007.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+    smallDescription: 'Lorem ipsum dolor sit amet, zzz',
+    title: 'INFANTIL',
+  },
+  {
+    id: 2,
+    img: 'https://images.pexels.com/photos/4762744/pexels-photo-4762744.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+    smallDescription: 'Lorem ipsum dolor sit amet, zzz',
+    title: 'ADOLESCENTE',
+  },
+  {
+    id: 3,
+    img: 'https://i.ibb.co/L52MdQ3/psycoterapy-img.png',
+    smallDescription: 'Lorem ipsum dolor sit amet, zzz sit amet, zzz sit amet, zzz sit amet, zzz',
+    title: 'ADULTO',
+  },
+  {
+    id: 4,
+    img: 'https://images.pexels.com/photos/8346257/pexels-photo-8346257.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260',
+    smallDescription: 'Lorem ipsum dolor sit amet, zzz',
+    title: 'PAREJA',
+  },
+  {
+    id: 5,
+    img: 'https://images.pexels.com/photos/3662849/pexels-photo-3662849.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+    smallDescription: 'Lorem ipsum dolor sit amet, zzz',
+    title: 'FAMILIA',
+  },
+  {
+    id: 6,
+    img: 'https://images.pexels.com/photos/5480696/pexels-photo-5480696.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500',
+    smallDescription: 'Lorem ipsum dolor sit amet, zzz',
+    title: 'OTROS',
+  },
+];
