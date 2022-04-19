@@ -18,7 +18,7 @@ export const dataSliders = [
     titleSlide: 'Sin contratos',
     descriptionSlide: 'Paga sólo cuando lo necesites y hazlo desde donde quieras.Deja de pagar costosas consultas ambulatorias. Nuestro concepto de consulta por uso te da la garantía de acceder a un psicólogo de forma fácil, rápida y económica.',
     textButton: 'Programa una cita',
-    colorSlide: 'fcf1ed',
+    colorSlide: 'f6fafe',
   },
   {
     idSlide: 3,
@@ -67,5 +67,38 @@ export const dataCategories = [
     img: 'https://images.pexels.com/photos/5480696/pexels-photo-5480696.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500',
     smallDescription: 'Lorem ipsum dolor sit amet, zzz',
     title: 'OTROS',
+  },
+];
+
+export const dataPopularServices = [
+  {
+    id: 1,
+    img: 'https://i.ibb.co/L52MdQ3/psycoterapy-img.png',
+    title: 'Psicoterapia',
+  },
+  {
+    id: 2,
+    img: 'https://i.ibb.co/L52MdQ3/psycoterapy-img.png',
+    title: 'Psicoterapia de otro doctor',
+  },
+  {
+    id: 3,
+    img: 'https://i.ibb.co/L52MdQ3/psycoterapy-img.png',
+    title: 'Psicoterapia de otro doctor nro 3',
+  },
+  {
+    id: 4,
+    img: 'https://i.ibb.co/L52MdQ3/psycoterapy-img.png',
+    title: 'Terapia nro 4',
+  },
+  {
+    id: 5,
+    img: 'https://i.ibb.co/L52MdQ3/psycoterapy-img.png',
+    title: 'Consulta nro 5 del doctor X',
+  },
+  {
+    id: 6,
+    img: 'https://i.ibb.co/L52MdQ3/psycoterapy-img.png',
+    title: 'Consulta con el nombre del servicio un poco largo',
   },
 ];
