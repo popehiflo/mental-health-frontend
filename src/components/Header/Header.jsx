@@ -1,7 +1,10 @@
 import { useRef, useState } from 'react';
 import styledComponents from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faBrain, faCartShopping, faTimes } from '@fortawesome/free-solid-svg-icons';
+import {
+  faBars, faBrain, faCartShopping,
+  faHouseLock, faTimes,
+} from '@fortawesome/free-solid-svg-icons';
 import { NavLink } from 'react-router-dom';
 
 const HeaderWrapper = styledComponents.header`
@@ -75,7 +78,7 @@ const HeaderNavMenu = styledComponents.nav`
   }
 `;
 
-const HeaderBtnCart = styledComponents.div`
+const HeaderBtnIcon = styledComponents.div`
   font-size: 2rem;
   color: var(--secondary-color);
   padding: 0 1rem;
@@ -108,10 +111,10 @@ const Header = () => {
     setIsActive(!isActive);
   };
   window.onscroll = () => {
-    menu.classList.remove('active');
+    menu.current.classList.remove('active');
   };
 
-  const quantity = 1;
+  const quantity = 0;
 
   return (
     <HeaderWrapper>
@@ -133,13 +136,16 @@ const Header = () => {
             <button type="button" className="btn-primary-sm">User</button>
           </NavLink>
         </HeaderNavMenu>
-        <HeaderBtnCart>
+        <HeaderBtnIcon>
+          <FontAwesomeIcon icon={faHouseLock} />
+        </HeaderBtnIcon>
+        <HeaderBtnIcon>
           {
             quantity > 0
               ? <FontAwesomeIcon icon={faCartShopping} style={{ color: 'var(--primary-color)' }} bounce />
               : <FontAwesomeIcon icon={faCartShopping} />
           }
-        </HeaderBtnCart>
+        </HeaderBtnIcon>
         <HeaderBtnMenu id="header__btn-menu" onClick={handleClickMenu} aria-hidden>
           {isActive ? <FontAwesomeIcon icon={faTimes} /> : <FontAwesomeIcon icon={faBars} />}
         </HeaderBtnMenu>
