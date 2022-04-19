@@ -3,7 +3,7 @@ import styledComponents from 'styled-components';
 import PropTypes from 'prop-types';
 import imgDefault from '../../assets/img/slide-default-img-animate.svg';
 
-const ContentSlide = styledComponents.div`
+const SlideContent = styledComponents.div`
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -43,7 +43,7 @@ const DescriptionText = styledComponents.p`
 const Button = styledComponents.button``;
 
 const Slide = ({ contentSlide }) => (
-  <ContentSlide>
+  <SlideContent>
     <ContentImg>
       <Image src={contentSlide.imgSlide} alt={contentSlide.altImg} />
     </ContentImg>
@@ -52,7 +52,7 @@ const Slide = ({ contentSlide }) => (
       <DescriptionText>{contentSlide.descriptionSlide}</DescriptionText>
       <Button className="btn-primary">{contentSlide.textButton}</Button>
     </ContentDescription>
-  </ContentSlide>
+  </SlideContent>
 );
 
 Slide.propTypes = {
