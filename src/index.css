@@ -52,7 +52,9 @@ section:nth-child(even) {
 .btn-primary {
   display: inline-block;
   margin-top: 1rem;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 0;
   border: var(--primary-border);
   border-radius: 2.48rem;
   color: var(--white);
@@ -61,10 +63,24 @@ section:nth-child(even) {
   background-color: var(--primary-color);
 }
 
+.btn-primary span {
+  padding: 0.7rem 1rem;
+  border-radius: 2.48rem;
+  background: var(--white);
+  color: var(--primary-color);
+  margin-left: 0.5rem;
+}
+
 .btn-primary:hover {
   background: var(--white);
   color: var(--primary-color);
   box-shadow: var(--primary-box-shadow);
+}
+
+.btn-primary:hover span {
+  color: var(--white);
+  background: var(--primary-color);
+  margin-left: 1rem;
 }
 
 .btn-secondary {
