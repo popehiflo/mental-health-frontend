@@ -1,9 +1,12 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Header from './components/Header/Header';
+import Slider from './components/Slider/Slider';
 
 const App = () => (
   <BrowserRouter>
     <Header />
+
+    <Slider />
 
     <Routes>
       <Route path="/" element={<h1 style={{ marginTop: '100px' }}>Home</h1>} />
