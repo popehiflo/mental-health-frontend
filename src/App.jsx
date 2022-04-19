@@ -1,6 +1,7 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Categories from './components/Categories/Categories';
 import Header from './components/Header/Header';
+import Services from './components/Services/Services';
 import Slider from './components/Slider/Slider';
 
 const App = () => (
@@ -9,6 +10,7 @@ const App = () => (
 
     <Slider />
     <Categories />
+    <Services />
 
     <Routes>
       <Route path="/" element={<h1 style={{ marginTop: '100px' }}>Home</h1>} />
