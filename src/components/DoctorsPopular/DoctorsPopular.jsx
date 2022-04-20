@@ -12,7 +12,7 @@ const ContainerBox = styledComponents.div`
 `;
 
 const DoctorsPopular = () => (
-  <DoctorsContainer>
+  <DoctorsContainer id="popular-doctors">
     <h1 className="section-heading">
       especialistas
       {' '}
