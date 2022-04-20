@@ -11,8 +11,8 @@ const ContainerBox = styledComponents.div`
   gap: 2rem;
 `;
 
-const Services = () => (
-  <ServicesContainer>
+const ServicesPopular = () => (
+  <ServicesContainer id="popular-services">
     <h1 className="section-heading">
       servicios
       {' '}
@@ -28,4 +28,4 @@ const Services = () => (
   </ServicesContainer>
 );
 
-export default Services;
+export default ServicesPopular;

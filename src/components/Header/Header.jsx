@@ -5,7 +5,8 @@ import {
   faBars, faBrain, faCartShopping,
   faHouseLock, faTimes,
 } from '@fortawesome/free-solid-svg-icons';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
+import { NavHashLink } from 'react-router-hash-link';
 
 const HeaderWrapper = styledComponents.header`
   padding: 2rem 9%;
@@ -101,17 +102,20 @@ const HeaderBtnMenu = styledComponents.div`
 
 const Header = () => {
   const menu = useRef();
-  const [isActive, setIsActive] = useState(false);
+  const [isOpenMenu, setIsOpenMenu] = useState(false);
   const handleClickMenu = () => {
-    if (isActive) {
+    if (isOpenMenu) {
       menu.current.classList.remove('active');
     } else {
       menu.current.classList.toggle('active');
     }
-    setIsActive(!isActive);
+    setIsOpenMenu(!isOpenMenu);
   };
   window.onscroll = () => {
-    menu.current.classList.remove('active');
+    if (isOpenMenu) {
+      menu.current.classList.remove('active');
+      setIsOpenMenu(!isOpenMenu);
+    }
   };
 
   const quantity = 0;
@@ -128,26 +132,31 @@ const Header = () => {
       </NavLink>
       <HeaderRest>
         <HeaderNavMenu className="navbar" ref={menu}>
-          <NavLink to="/">Home</NavLink>
+          <NavHashLink to="/#home">Inicio</NavHashLink>
+          <NavHashLink to="/#popular-categories">Categorias</NavHashLink>
+          <NavHashLink to="/#popular-services">Servicios</NavHashLink>
+          <NavHashLink to="/#popular-doctors">Doctores</NavHashLink>
           <NavLink to="/menu1">Menu 1</NavLink>
-          <NavLink to="/menu2">Menu 1</NavLink>
-          <NavLink to="/menu3">Menu 1</NavLink>
           <NavLink to="/sign-in">
             <button type="button" className="btn-primary-sm">User</button>
           </NavLink>
         </HeaderNavMenu>
-        <HeaderBtnIcon>
-          <FontAwesomeIcon icon={faHouseLock} />
-        </HeaderBtnIcon>
-        <HeaderBtnIcon>
-          {
-            quantity > 0
-              ? <FontAwesomeIcon icon={faCartShopping} style={{ color: 'var(--primary-color)' }} bounce />
-              : <FontAwesomeIcon icon={faCartShopping} />
-          }
-        </HeaderBtnIcon>
+        <Link to="/admin-panel">
+          <HeaderBtnIcon>
+            <FontAwesomeIcon icon={faHouseLock} />
+          </HeaderBtnIcon>
+        </Link>
+        <Link to="/cart">
+          <HeaderBtnIcon>
+            {
+              quantity > 0
+                ? <FontAwesomeIcon icon={faCartShopping} style={{ color: 'var(--primary-color)' }} bounce />
+                : <FontAwesomeIcon icon={faCartShopping} />
+            }
+          </HeaderBtnIcon>
+        </Link>
         <HeaderBtnMenu id="header__btn-menu" onClick={handleClickMenu} aria-hidden>
-          {isActive ? <FontAwesomeIcon icon={faTimes} /> : <FontAwesomeIcon icon={faBars} />}
+          {isOpenMenu ? <FontAwesomeIcon icon={faTimes} /> : <FontAwesomeIcon icon={faBars} />}
         </HeaderBtnMenu>
       </HeaderRest>
     </HeaderWrapper>

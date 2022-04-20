@@ -52,7 +52,7 @@ const Slider = () => {
   };
 
   return (
-    <SliderWrapper>
+    <SliderWrapper id="home">
       <Arrow direction="left" onClick={() => handleArrowClick('left')}>
         <FontAwesomeIcon icon={faChevronLeft} />
       </Arrow>

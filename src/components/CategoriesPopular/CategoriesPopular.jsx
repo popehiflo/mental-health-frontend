@@ -11,9 +11,15 @@ const ContainerBox = styledComponents.div`
   gap: 2rem;
 `;
 
-const Categories = () => (
-  <CategoriesContainer>
-    <h1 className="section-heading">categorias</h1>
+const CategoriesPopular = () => (
+  <CategoriesContainer id="popular-categories">
+    <h1 className="section-heading">
+      categorías
+      {' '}
+      <span>
+        más buscadas
+      </span>
+    </h1>
     <ContainerBox>
       {dataCategories.map((category) => (
         <CategorieCard key={category.id} category={category} />
@@ -22,4 +28,4 @@ const Categories = () => (
   </CategoriesContainer>
 );
 
-export default Categories;
+export default CategoriesPopular;

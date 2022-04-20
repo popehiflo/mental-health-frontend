@@ -1,19 +1,21 @@
 import React from 'react';
 import styledComponents from 'styled-components';
 import PropTypes from 'prop-types';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 
 const CategoryBox = styledComponents.div`
   background: var(--white);
   border-radius: 0.5rem;
   box-shadow: var(--primary-box-shadow);
-  border: var(--primary-border);
+  border: var(--primary-light-border);
   padding: 2.5rem;
   display: flex;
   flex-direction: column;
   img {
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: contain; //cover
   }
   h3 {
     color: var(--secondary-color);
@@ -25,6 +27,10 @@ const CategoryBox = styledComponents.div`
     font-size: 1.4rem;
     line-height: 2;
   }
+  button {
+    margin: auto;
+    margin-top: 1rem;
+  }
 `;
 
 const CategorieCard = ({ category }) => (
@@ -34,6 +40,9 @@ const CategorieCard = ({ category }) => (
     <p>{category.smallDescription}</p>
     <button type="button" className="btn-primary">
       Buscar
+      <span>
+        <FontAwesomeIcon icon={faMagnifyingGlass} />
+      </span>
     </button>
   </CategoryBox>
 );
