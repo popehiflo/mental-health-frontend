@@ -1,5 +1,6 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Categories from './components/Categories/Categories';
+import DoctorsPopular from './components/DoctorsPopular/DoctorsPopular';
 import Header from './components/Header/Header';
 import Services from './components/Services/Services';
 import Slider from './components/Slider/Slider';
@@ -9,8 +10,12 @@ const App = () => (
     <Header />
 
     <Slider />
+    <section style={{ padding: '0.5rem' }} />
     <Categories />
+    <section style={{ padding: '0.5rem' }} />
     <Services />
+    <section style={{ padding: '0.5rem' }} />
+    <DoctorsPopular />
 
     <Routes>
       <Route path="/" element={<h1 style={{ marginTop: '100px' }}>Home</h1>} />
