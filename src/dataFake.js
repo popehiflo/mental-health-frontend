@@ -1,5 +1,6 @@
 import img1 from './assets/img/slide-1-home-mind-img-animate.svg';
 import img2 from './assets/img/slide-2-about-us-img-animate.svg';
+import img3 from './assets/img/slide-2-about-us-img.png';
 
 export const dataSliders = [
   {
@@ -78,27 +79,48 @@ export const dataPopularServices = [
   },
   {
     id: 2,
-    img: 'https://i.ibb.co/L52MdQ3/psycoterapy-img.png',
+    img: `${img3}`,
     title: 'Psicoterapia de otro doctor',
   },
   {
     id: 3,
-    img: 'https://i.ibb.co/L52MdQ3/psycoterapy-img.png',
+    img: `${img3}`,
     title: 'Psicoterapia de otro doctor nro 3',
   },
   {
     id: 4,
-    img: 'https://i.ibb.co/L52MdQ3/psycoterapy-img.png',
+    img: `${img3}`,
     title: 'Terapia nro 4',
   },
   {
     id: 5,
-    img: 'https://i.ibb.co/L52MdQ3/psycoterapy-img.png',
+    img: `${img3}`,
     title: 'Consulta nro 5 del doctor X',
   },
   {
     id: 6,
-    img: 'https://i.ibb.co/L52MdQ3/psycoterapy-img.png',
+    img: `${img3}`,
     title: 'Consulta con el nombre del servicio un poco largo',
+  },
+];
+
+export const dataPopularDoctors = [
+  {
+    id: 1,
+    avatar: 'https://images.pexels.com/photos/1104007/pexels-photo-1104007.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+    fullName: 'Pool Petter Hijuela Florian',
+    academic: 'licenciatura en psicología. diplomado en terapia breve sistémica. maestría en neuropsicología',
+  },
+  {
+    id: 1,
+    avatar: `${img3}`,
+    fullName: 'Pool Petter Hijuela',
+    academic: 'licenciatura en psicología. diplomado en terapia breve sistémica. maestría en neuropsicología',
+  },
+  {
+    id: 1,
+    avatar: 'https://images.pexels.com/photos/4762744/pexels-photo-4762744.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+    fullName: 'popehiflo',
+    academic: 'Lorem Ipsum, Dolor Sit Amet Consectetur Adipisicing Elit. Provident, Eius.',
   },
 ];
