@@ -9,7 +9,8 @@ import { faFacebookF, faInstagram, faLinkedinIn, faPinterestP, faTwitter, faWhat
 
 const FooterContainer = styledComponents.div`
   background: var(--primary-color);
-  padding: 1rem 9%;
+  margin-top: 2rem;
+  padding: 2rem 9%;
   @media (max-width: 991px) {
     padding: 2rem;
   }
@@ -46,10 +47,11 @@ const FooterBox = styledComponents.div`
 const Credit = styledComponents.div`
   background: var(--white);
   padding: 1rem;
-  padding-top: 2rem;
+  padding-top: 1.5rem;
   margin-top: 2rem;
   text-align: center;
-  font-size: 2rem;
+  font-size: 1.8rem;
+  border-radius: 2.5rem;
   color: var(--light-color);
   span {
     color: var(--primary-color);

@@ -6,6 +6,7 @@ import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
 import Slider from './components/Slider/Slider';
 import Home from './pages/Home/Home';
+import Services from './pages/Services/Services';
 
 const App = () => (
   <BrowserRouter>
@@ -18,10 +19,11 @@ const App = () => (
         <Route path="/#popular-services" element={<ServicesPopular />} />
         <Route path="/#popular-doctors" element={<DoctorsPopular />} />
       </Route>
+      <Route path="/services" element={<Services />}>
+        <Route path="/services/:category" element={<h1 style={{ marginTop: '100px' }}>Service: category</h1>} />
+        <Route path="/services/:serviceId" element={<h1 style={{ marginTop: '100px' }}>Service: service Id</h1>} />
+      </Route>
       <Route path="/cart" element={<h1 style={{ marginTop: '100px' }}>Cart</h1>} />
-      <Route path="/services" element={<h1 style={{ marginTop: '100px' }}>All Services</h1>} />
-      <Route path="/services/:category" element={<h1 style={{ marginTop: '100px' }}>Service: category</h1>} />
-      <Route path="/services/:serviceId" element={<h1 style={{ marginTop: '100px' }}>Service: service Id</h1>} />
       <Route path="/sign-in" element={<h1 style={{ marginTop: '100px' }}>Sign In</h1>} />
       <Route path="/sign-up" element={<h1 style={{ marginTop: '100px' }}>Sign Up</h1>} />
       <Route path="/admin-panel" element={<h1 style={{ marginTop: '100px' }}>Admin Panel</h1>} />
