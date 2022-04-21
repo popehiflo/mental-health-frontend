@@ -9,6 +9,13 @@ const Home = () => (
     <Slider />
     <section style={{ padding: '0.5rem' }} />
     <CategoriesPopular />
+    <h1 className="section-heading">
+      servicios
+      {' '}
+      <span>
+        más buscados
+      </span>
+    </h1>
     <Services />
     <DoctorsPopular />
   </>

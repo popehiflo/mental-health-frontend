@@ -31,13 +31,14 @@ const HeaderLogo = styledComponents.h1`
   font-weight: 400;
 `;
 
+const HeaderLogoIcon = styledComponents.i`
+  color: var(--primary-color);
+`;
+
 const HeaderRest = styledComponents.div`
   display: flex;
   align-items: center;
   justify-content: flex-end;
-`;
-const HeaderLogoIcon = styledComponents.i`
-  color: var(--primary-color);
 `;
 
 const HeaderNavMenu = styledComponents.nav`
@@ -136,7 +137,32 @@ const Header = () => {
           <NavHashLink to="/#popular-categories">Categorias</NavHashLink>
           <NavHashLink to="/#popular-services">Servicios</NavHashLink>
           <NavHashLink to="/#popular-doctors">Doctores</NavHashLink>
-          <NavLink to="/menu1">Menu 1</NavLink>
+          <NavLink
+            to="/menu1"
+            style={({ isActive }) => (
+              {
+                fontSize: isActive ? '1.8rem' : '1.7rem',
+                color: isActive ? 'var(--primary-color)' : 'var(--secondary-color)',
+                borderRadius: isActive ? '0 0 0.5rem 0' : '0.5rem',
+                boxShadow: isActive ? 'var(--primary-box-shadow)' : 'var(--secondary-color)',
+              }
+            )}
+          >
+            Menu 1
+          </NavLink>
+          <NavLink
+            to="/services"
+            style={({ isActive }) => (
+              {
+                fontSize: isActive ? '1.8rem' : '1.7rem',
+                color: isActive ? 'var(--primary-color)' : 'var(--secondary-color)',
+                borderRadius: isActive ? '0 0 0.5rem 0' : '0.5rem',
+                boxShadow: isActive ? 'var(--primary-box-shadow)' : 'var(--secondary-color)',
+              }
+            )}
+          >
+            All Services
+          </NavLink>
           <NavLink to="/sign-in">
             <button type="button" className="btn-primary-sm">User</button>
           </NavLink>

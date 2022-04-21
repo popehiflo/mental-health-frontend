@@ -13,13 +13,6 @@ const ContainerBox = styledComponents.div`
 
 const ServicesPopular = () => (
   <ServicesContainer id="popular-services">
-    <h1 className="section-heading">
-      servicios
-      {' '}
-      <span>
-        más buscados
-      </span>
-    </h1>
     <ContainerBox>
       {dataPopularServices.map((service) => (
         <ServiceCard key={service.id} service={service} />
